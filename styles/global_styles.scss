@@ -1,0 +1,105 @@
+/* Colors */
+$global-bg-color: #16031a;
+$global-fg-color: #dddddd;
+$global-border-color: #999999;
+
+/* Font */
+@font-face {
+  font-family: ibmPlexSerif;
+  src: url('./assets/fonts/ibm_plex_serif/IBMPlexSerif-Medium.ttf') format(truetype)
+  // src: url(../fonts/static/Rubik-Regular.ttf)
+  // src: url(../fonts/Rubik-VariableFont_wght.ttf)
+}
+
+* {
+  font-family: ibmPlexSerif;
+}
+
+/* Root */
+* {
+  background-color: $global-bg-color;
+  color: $global-fg-color;
+  margin: 0;
+}
+
+/* <Header/> */
+$header-bg-color: #240729;
+
+.header {
+  width: 100vw;
+  background-color: $header-bg-color;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header * {
+  background-color: inherit;
+}
+
+.header .logo-container {
+  max-width: 10%;
+  height: auto;
+  margin: 0.25vw 0.75vw 0.75vw 0.75vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.header .logo-container p {
+  text-align: center;
+  font-size: 0.75vw
+}
+
+.header .nav-container {
+  display: flex;  
+}
+
+.header .nav-container .nav-elements {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.header .nav-container .nav-elements div {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  font-size: 1vw;
+}
+
+.header .nav-container .nav-elements div:hover {
+  background-color: #340d3b;
+}
+
+.header .nav-container .search-box-container {
+  display: flex;
+  align-items: center;
+}
+
+.header .nav-container .search-box-container .search-box {
+  height: 1.5vw;
+  width: 10vw;
+  margin: 20px;
+  // border: 1px solid $global-border-color;
+  border: none;
+  border-radius: 3px;
+  font-size: 1vw;
+  // background-color: lighten($global-bg-color, 8%);
+  background-color: darken(#320237, 4%);
+  padding: 6px 12px 6px 12px;
+}
+
+
+/* <DistroSpecificCodeBlock/> */
+
+.distro-specific-code-block .distro-button {
+  border: 1px solid transparent;
+}
+
+.distro-specific-code-block .selected-distro {
+  // border: 1px solid $global-border-color;
+  background-color: #555555
+}
+
+.distro-specific-code-block .distro-button:hover {
+  background-color: #444444
+}
